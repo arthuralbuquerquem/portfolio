@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'IMB Plex Sans';
+}
+
+:root {
+    --font-color-primary: #0086bb;
+    --font-color-secondary: #1E2326;
+}
+
+body {
+    background-color: #04213b;
+}
+
+.container {
+    width: 60%;
+}
+
+/* CABEÇALHO */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #FFF;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-family: 'DM Sans';
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    font-family: 'Roboto';
+    transition: all .2s ease-out;
+    padding-bottom: 4px;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid var(--font-color-primary);
+}
+
+/* HOME */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home {
+    display: flex;
+}
+
+.myInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.myInfo h2 {
+    color: #FFF;
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin: 20px 0 5px 0;
+}
+
+.myInfo h1 {
+    color: #FFF;
+    font-family: 'Kanit';
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.myInfo h1 span {
+    color: var(--font-color-primary);
+}
+
+.myInfo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 60px;
+    margin-top: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(40deg, rgba(0,0,0,1) 0%, rgba(0,93,251,1) 100%);
+    border: 1px solid var(--font-color-primary);
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    font-family: 'Roboto';
+}
+
+.myImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myImage img {
+    width: 100%;
+}
