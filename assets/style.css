@@ -3,12 +3,18 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: 'IMB Plex Sans';
+    font-family: 'Roboto';
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
     --font-color-primary: #0086bb;
     --font-color-secondary: #1E2326;
+    --font-color-thirthy: #0D2235;
+    --font-color-secunarytxt: #CCC;
 }
 
 body {
@@ -24,18 +30,21 @@ body {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 999;
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid rgba(114, 114, 126, 0.5);
+    transition: all 0.5s ease;
 }
 
 .headerContent {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
+    transition: all 0.5s ease;
 }
 
 /* LOGO */
@@ -48,9 +57,14 @@ body {
     text-decoration: none;
     color: #FFF;
     text-align: center;
-    font-family: 'DM Sans';
+    font-family: 'Kanit';
     font-weight: 600;
     font-size: 25px;
+    transition: all .3s ease;
+}
+
+.logo a:hover {
+    color: var(--font-color-primary);
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -67,7 +81,6 @@ nav ul li a {
     text-decoration: none;
     color: #FFF;
     font-size: 18px;
-    font-family: 'Roboto';
     transition: all .2s ease-out;
     padding-bottom: 4px;
 }
@@ -78,16 +91,21 @@ nav ul li a:hover {
 
 /* HOME */
 #home {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 1000px;
+    background: rgb(13,34,53);
+    background: linear-gradient(0deg, rgba(13,34,53,1) 0%, rgba(8,56,98,1) 30%, rgba(8,56,98,1) 70%, rgba(13,34,53,1) 100%); 
 }
 
 .home {
     display: flex;
 }
 
+/* LEFT SIDE HOME */
 .myInfo {
     display: flex;
     justify-content: center;
@@ -97,7 +115,6 @@ nav ul li a:hover {
 
 .myInfo h2 {
     color: #FFF;
-    font-family: 'Roboto';
     font-weight: 300;
     margin: 20px 0 5px 0;
 }
@@ -122,14 +139,19 @@ nav ul li a:hover {
     height: 60px;
     margin-top: 20px;
     background: rgb(0,0,0);
-    background: linear-gradient(40deg, rgba(0,0,0,1) 0%, rgba(0,93,251,1) 100%);
+    background: linear-gradient(40deg, rgba(0,0,0,1) 0%, rgba(0,43,116,1) 65%, rgba(0,94,255,1) 100%);
     border: 1px solid var(--font-color-primary);
     text-decoration: none;
     color: #FFF;
     font-size: 20px;
-    font-family: 'Roboto';
+    transition: all .8s ease;
 }
 
+.myInfo a:hover {
+    width: 300px;
+}
+
+/* RIGHT SIDE HOME */
 .myImage {
     flex: 1;
     display: flex;
@@ -139,4 +161,112 @@ nav ul li a:hover {
 
 .myImage img {
     width: 100%;
+    transition: all .9s ease-in-out;
+}
+
+.myImage img:hover {
+    transform: scale(1.2);
+}
+
+/* ABOUT ME */
+#aboutMe {
+    display: flex;
+    justify-content: center;
+    background-color: var(--font-color-thirthy);
+}
+
+.aboutMe {
+    display: flex;
+    margin: 100px 0;
+}
+
+.aboutMeImage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.aboutMeImage img {
+    width: 85%;
+    transition: all .8s ease-in-out;
+}
+
+.aboutMeImage img:hover {
+    transform: scale(1.09);
+}
+
+.aboutMeInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutMeInfo h2 {
+    color: #FFF;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.bluePoint {
+    color: var(--font-color-primary);
+    font-size: 70px;
+}
+
+.aboutMeInfo p {
+    color: var(--font-color-secunarytxt);
+    line-height: 30px;
+}
+
+/* PROJECTS */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects h2 {
+    color: #FFF;
+    font-size: 45px;
+    margin-top: 60px;
+}
+
+.projectsAarea {
+    display: flex;
+    justify-content: center;
+}
+
+.projectsBox {
+    background-color: var(--font-color-thirthy);
+    padding: 40px;
+    margin: 40px 10px 25px 10px;
+    transition: all .5s ease;
+    border: 2px solid rgb(0, 0, 0, 0);
+}
+
+.projectsBox:hover {
+    border: 2px solid var(--font-color-primary);
+}
+
+.projectsBox h4 {
+    color: #FFF;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.projectsBox p {
+    color: var(--font-color-secunarytxt);
+    line-height: 30px;
+}
+
+#projects a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--font-color-primary);
+    transition: all .3s ease;
+    margin-bottom: 60px;
+}
+
+#projects a:hover {
+    color: #FFF;
 }
