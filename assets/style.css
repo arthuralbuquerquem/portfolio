@@ -10,6 +10,19 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #083862;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--font-color-primary);
+    border-radius: 30px;
+}
+
 :root {
     --font-color-primary: #0086bb;
     --font-color-secondary: #1E2326;
@@ -22,7 +35,7 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 70%;
 }
 
 /* CABEÇALHO */
@@ -86,6 +99,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    border-bottom: 2px solid var(--font-color-primary);
+}
+
+.active {
     border-bottom: 2px solid var(--font-color-primary);
 }
 
@@ -233,19 +250,16 @@ nav ul li a:hover {
 
 .projectsAarea {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .projectsBox {
-    background-color: var(--font-color-thirthy);
-    padding: 40px;
-    margin: 40px 10px 25px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     transition: all .5s ease;
-    border: 2px solid rgb(0, 0, 0, 0);
-}
-
-.projectsBox:hover {
-    border: 2px solid var(--font-color-primary);
 }
 
 .projectsBox h4 {
@@ -259,7 +273,43 @@ nav ul li a:hover {
     line-height: 30px;
 }
 
-#projects a {
+.projectsImg {
+    width: 350px;
+    height: 200px;
+    margin: 40px 10px 25px 10px;
+    background-image: url(../assets/images/projects-avax.png);
+    background-position: center;
+    background-size: cover;
+    border: 2px solid rgb(0, 0, 0, 0);
+    transition: all .4s ease;
+}
+
+.projectsImg:hover {
+    border: 2px solid var(--font-color-primary);
+    transform: scale(1.08, 1.08);
+}
+
+.projectsImg:nth-child(2) {
+    background-image: url(../assets/images/projects-devboost.png);
+}
+
+.projectsImg:nth-child(3) {
+    background-image: url(../assets/images/projects-starbucks.png);
+}
+
+.projectsImg:nth-child(4) {
+    background-image: url(../assets/images/projects-medcenter.png);
+}
+
+.projectsImg:nth-child(5) {
+    background-image: url(../assets/images/projects-bateria.png);
+}
+
+.projectsImg:nth-child(6) {
+    background-image: url(../assets/images/projects-pizzas.png);
+}
+
+.moreProjects {
     text-decoration: none;
     font-weight: 600;
     color: var(--font-color-primary);
@@ -267,6 +317,31 @@ nav ul li a:hover {
     margin-bottom: 60px;
 }
 
-#projects a:hover {
+.moreProjects:hover {
     color: #FFF;
+}
+
+/* SERVICES */
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--font-color-thirthy);
+}
+
+#services h2 {
+    color: #FFF;
+    font-size: 45px;
+    margin-top: 60px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.servicesArea {
+    display: flex;
 }

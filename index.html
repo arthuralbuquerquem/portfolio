@@ -13,15 +13,14 @@
     <header id="header">
         <div class="headerContent container">
             <div class="logo">
-                <a href="#home">ARTHUR</a>
+                <a href="#home" onclick="home()">ARTHUR</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#aboutMe">Quem sou</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Conhecimentos</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="#aboutMe" onclick="aboutMe()" id="menuAboutMe">Quem sou</a></li>
+                    <li><a href="#projects" onclick="projects()" id="menuProjects">Projetos</a></li>
+                    <li><a href="" onclick="know()" id="menuKnow">Conhecimentos</a></li>
+                    <li><a href="" onclick="contact()" id="menuContact">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +34,7 @@
                     <h2>Olá, eu sou</h2>
                     <h1>Arthur Albuquerque<span>.</span></h1>
                     <h2>Front-end developer e UI Designer.</h2>
-                    <a href="https://github.com/arthuralbuquerquem" target="_blank">GitHub</a>
+                    <a href="assets/downloads/curriculo-arthur.pdf" download="curriculo-arthur" type="application/pdf">Donwnload CV</a>
                 </div>
                 <div class="myImage">
                     <img src="assets/images/me.png" alt="">
@@ -56,22 +55,39 @@
         </section>
 
         <section id="projects">
-            <h2>Projetos<span class="bluePoint">.</span></h2>
-            <div class="projectsAarea container">
+            <div class="projectsAarea container"> 
+                <h2>Projetos<span class="bluePoint">.</span></h2>
                 <div class="projectsBox">
-                    <h4>Em breve</h4>
-                    <p>Pegue o café e espere um pouco, estou desenvolvendo o projeto. </p>
+                    <a class="projectsImg" href="https://arthuralbuquerquem.github.io/avax-front-end/" target="_blank"></a>
+
+                    <a class="projectsImg" href="https://arthuralbuquerquem.github.io/devboost-desafio03/" target="_blank"></a>
+
+                    <a class="projectsImg" href="https://arthuralbuquerquem.github.io/starbucks-front-end/" target="_blank"></a>
+
+                    <a class="projectsImg" href="https://arthuralbuquerquem.github.io/medicenter-front-end/" target="_blank"></a>
+
+                    <a class="projectsImg" href="https://arthuralbuquerquem.github.io/bateria/" target="_blank"></a>
+
+                    <a class="projectsImg" href="https://arthuralbuquerquem.github.io/compra-de-pizzas/" target="_blank"></a>
                 </div>
-                <div class="projectsBox">
-                    <h4>Em breve</h4>
-                    <p>Pegue o café e espere um pouco, estou desenvolvendo o projeto. </p>
-                </div>
-                <div class="projectsBox">
-                    <h4>Em breve</h4>
-                    <p>Pegue o café e espere um pouco, estou desenvolvendo o projeto. </p>
+            <a class="moreProjects" href="https://github.com/arthuralbuquerquem" target="_blank">Mais projetos em meu GitHub</a>
+        </section>
+
+        <section id="services">
+            <div class="services container">
+                <h2>Services<span class="bluePoint">.</span></h2>
+                <div class="servicesArea">
+                    <div class="servicesBox">
+                        ...
+                    </div>
+                    <div class="servicesBox">
+                        ...
+                    </div>
+                    <div class="servicesBox">
+                        ...
+                    </div>
                 </div>
             </div>
-            <a href="https://github.com/arthuralbuquerquem" target="_blank">Mais projetos em meu GitHub</a>
         </section>
 
         
