@@ -6,57 +6,80 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Kanit:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/images/iconsite.png">
     <title>Portfólio | Arthur Albuquerque Front-end-developer</title>
 </head>
 <body>
 
+    <!-- INÍCIO DO HEADER -->
     <header id="header">
         <div class="headerContent container">
+            <!-- LOGO -->
             <div class="logo">
                 <a href="#home" onclick="home()">ARTHUR</a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#aboutMe" onclick="aboutMe()" id="menuAboutMe">Quem sou</a></li>
-                    <li><a href="#projects" onclick="projects()" id="menuProjects">Projetos</a></li>
-                    <li><a href="" onclick="know()" id="menuKnow">Conhecimentos</a></li>
-                    <li><a href="" onclick="contact()" id="menuContact">Contato</a></li>
-                </ul>
-            </nav>
+            <!-- MENU -->
+            <div class="menu">
+                <div class="menuMobile">
+                    <div class="mm_line"></div>
+                    <div class="mm_line"></div>
+                    <div class="mm_line"></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#aboutMe" id="menuAboutMe">Quem sou</a></li>
+                        <li><a href="#projects" id="menuProjects">Projetos</a></li>
+                        <li><a href="#knowledge" id="menuKnow">Conhecimentos</a></li>
+                        <li><a href="#contact" id="menuContact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+    <!-- FIM DO HEADER -->
 
+    <!-- INÍCIO DO CONTEÚDO -->
     <main>
 
+        <!-- INÍCIO DA PRIMEIRA SESSÃO -->
         <section id="home">
             <div class="home container">
+                <!-- INFORMAÇÕES (NOME, SOBRE...) -->
                 <div class="myInfo">
                     <h2>Olá, eu sou</h2>
                     <h1>Arthur Albuquerque<span>.</span></h1>
                     <h2>Front-end developer e UI Designer.</h2>
                     <a href="assets/downloads/curriculo-arthur.pdf" download="curriculo-arthur" type="application/pdf">Donwnload CV</a>
                 </div>
+                <!-- IMAGEM DO SOBRE -->
                 <div class="myImage">
                     <img src="assets/images/me.png" alt="">
                 </div>
             </div>
         </section>
+        <!-- FIM DA PRIMEIRA SESSÃO -->
 
+        <!-- INÍCIO DO QUEM SOU -->
         <section id="aboutMe">
             <div class="aboutMe container">
+                <!-- IMAGEM QUEM SOU -->
                 <div class="aboutMeImage">
                     <img src="assets/images/logo.png" alt="">
                 </div>
+                <!-- INFORMAÇÕES QUEM SOU -->
                 <div class="aboutMeInfo">
                     <h2>Quem sou<span class="bluePoint">.</span></h2>
                     <p>Meu nome é Arthur Albuquerque. Sou desenvolvedor Front-end e UI Designer. Desenvolvo interfaces modernas e de alta qualidade, concentrado em performace, animações e responsividade.</p>
                 </div>
             </div>
         </section>
+        <!-- FIM DO QUEM SOU -->
 
+        <!-- INÍCIO DA SESSÃO PROJETOS -->
         <section id="projects">
             <div class="projectsAarea container"> 
-                <h2>Projetos<span class="bluePoint">.</span></h2>
+                <h2 class="sectionTitle">Projetos<span class="bluePoint">.</span></h2>
+                <!-- PROJETOS IMAGENS -->
                 <div class="projectsBox">
                     <a class="projectsImg" href="https://arthuralbuquerquem.github.io/avax-front-end/" target="_blank"></a>
 
@@ -72,28 +95,63 @@
                 </div>
             <a class="moreProjects" href="https://github.com/arthuralbuquerquem" target="_blank">Mais projetos em meu GitHub</a>
         </section>
+        <!-- FIM DA SESSÃO PROJETOS -->
 
-        <section id="services">
-            <div class="services container">
-                <h2>Services<span class="bluePoint">.</span></h2>
-                <div class="servicesArea">
-                    <div class="servicesBox">
-                        ...
+        <!-- INÍCIO DA SESSÃO CONHECIMENTOS -->
+        <section id="knowledge">
+            <div class="knowledge container">
+                <h2 class="sectionTitle">Conhecimentos<span class="bluePoint">.</span></h2>
+                <div class="knowledgeArea">
+                    <div class="knowledgeBox">
+                        <img src="assets/images/html5.svg" alt="">
+                        <p><span class="knowledgeNameColor">HTML</span> é uma linguagem baseada em marcação, onde marcamos os elementos para definir quais informações a página vai exibir.</p>
                     </div>
-                    <div class="servicesBox">
-                        ...
+                    <div class="knowledgeBox">
+                        <img src="assets/images/css3.svg" alt="">
+                        <p><span class="knowledgeNameColor">CSS</span> é uma linguagem de folha de estilo, composta por "camadas", criada com propósito de estilizar páginas HTML.</p>
                     </div>
-                    <div class="servicesBox">
-                        ...
+                    <div class="knowledgeBox">
+                        <img src="assets/images/javascript.svg" alt="">
+                        <p><span class="knowledgeNameColor">JavaScript</span> é uma linguagem de programação interpretada estruturada, de script em alto nível de tipagem dinâmica fraca e multiparadigma.</p>
+                    </div>
+                    <div class="knowledgeBox">
+                        <img src="assets/images/python.svg" alt="">
+                        <p><span class="knowledgeNameColor">Python</span> é uma linguagem de programação interpretada de alto nível e que suporta múltiplos paradigmas de programação: imperativo, orientado a objetos e funcional.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- FIM DA SESSÃO CONHECIMENTOS -->
 
-        
-
+        <!-- COMEÇO DA SESSÃO CONTATO -->
+        <section id="contact">
+            <div class="contact container">
+                <h2 class="sectionTitle">Entre em Contato<span class="bluePoint">.</span></h2>
+                <div class="contactArea">
+                    <div class="contactBox">
+                        <a href="mailto:arthuralbqr@gmail.com" target="_blank"><img src="assets/images/email.png" alt=""></a>
+                    </div>
+                    <div class="contactBox">
+                        <a href="https://www.linkedin.com/in/arthuralbuquerquem/" target="_blank"><img src="assets/images/linkedin.png" alt=""></a>
+                    </div>
+                    <div class="contactBox">
+                        <a href="https://github.com/arthuralbuquerquem/" target="_blank"><img src="assets/images/github.png" alt=""></a>
+                    </div>
+                    <div class="contactBox">
+                        <a href="https://www.instagram.com/arthuralbuquerquem/" target="_blank"><img src="assets/images/instagram.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
         
     </main>
+
+    <footer>
+        <div class="footer container">
+            <div class="footerInfo"><a href="https://github.com/arthuralbuquerquem/" target="_blank">2022 © Arthur Albuquerque</a></div>
+            <div class="footerLogo"><a href="https://github.com/arthuralbuquerquem/" target="_blank"><img src="assets/images/iconsite.png" alt=""></a></div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

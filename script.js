@@ -8,62 +8,36 @@ function menuSubir() {
         headerBg.style.background = 'rgba(0, 0, 0, 0.5)';
     } else {
         headerMargin.style.margin = '0';
-        headerBg.style.background = 'rgba(0, 0, 0, 0.2)';
+        headerBg.style.background = 'rgba(13, 34, 53, 1)';
     }
 }   setInterval(menuSubir, 100);
 
 // MENU COM ACTIVE
-function aboutMe(){
+function activeMenu(){
     let aboutMe = document.querySelector('#menuAboutMe');
     let projects = document.querySelector('#menuProjects');
     let know = document.querySelector('#menuKnow');
     let contact = document.querySelector('#menuContact');
-    aboutMe.classList.add('active')
-    projects.classList.remove('active')
-    know.classList.remove('active')
-    contact.classList.remove('active')
-}
-
-function projects(){
-    let aboutMe = document.querySelector('#menuAboutMe');
-    let projects = document.querySelector('#menuProjects');
-    let know = document.querySelector('#menuKnow');
-    let contact = document.querySelector('#menuContact');
-    aboutMe.classList.remove('active')
-    projects.classList.add('active')
-    know.classList.remove('active')
-    contact.classList.remove('active')
-}
-
-function know(){
-    let aboutMe = document.querySelector('#menuAboutMe');
-    let projects = document.querySelector('#menuProjects');
-    let know = document.querySelector('#menuKnow');
-    let contact = document.querySelector('#menuContact');
-    aboutMe.classList.remove('active')
-    projects.classList.remove('active')
-    know.classList.add('active')
-    contact.classList.remove('active')
-}
-
-function contact(){
-    let aboutMe = document.querySelector('#menuAboutMe');
-    let projects = document.querySelector('#menuProjects');
-    let know = document.querySelector('#menuKnow');
-    let contact = document.querySelector('#menuContact');
-    aboutMe.classList.remove('active')
-    projects.classList.remove('active')
-    know.classList.remove('active')
-    contact.classList.add('active')
-}
-
-function home(){
-    let aboutMe = document.querySelector('#menuAboutMe');
-    let projects = document.querySelector('#menuProjects');
-    let know = document.querySelector('#menuKnow');
-    let contact = document.querySelector('#menuContact');
-    aboutMe.classList.remove('active')
-    projects.classList.remove('active')
-    know.classList.remove('active')
-    contact.classList.remove('active')
-}
+    
+    if (window.scrollY < 1000) {
+        aboutMe.classList.remove('active');
+        projects.classList.remove('active');
+        know.classList.remove('active');
+        contact.classList.remove('active');
+    } else if (window.scrollY > 999 && window.scrollY < 1570) {
+        aboutMe.classList.add('active');
+        projects.classList.remove('active');
+        know.classList.remove('active');
+        contact.classList.remove('active');
+    } else if (window.scrollY > 1570 && window.scrollY < 2220) {
+        aboutMe.classList.remove('active');
+        projects.classList.add('active');
+        know.classList.remove('active');
+        contact.classList.remove('active');
+    } else if (window.scrollY > 2220) {
+        aboutMe.classList.remove('active');
+        projects.classList.remove('active');
+        know.classList.add('active');
+        contact.classList.remove('active');
+    }
+}   setInterval(activeMenu, 100);
