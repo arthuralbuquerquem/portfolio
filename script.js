@@ -34,10 +34,15 @@ function activeMenu(){
         projects.classList.add('active');
         know.classList.remove('active');
         contact.classList.remove('active');
-    } else if (window.scrollY > 2220) {
+    } else if (window.scrollY > 2220 && window.scrollY < 2400) {
         aboutMe.classList.remove('active');
         projects.classList.remove('active');
         know.classList.add('active');
         contact.classList.remove('active');
+    } else {
+        aboutMe.classList.remove('active');
+        projects.classList.remove('active');
+        know.classList.remove('active');
+        contact.classList.add('active');
     }
 }   setInterval(activeMenu, 100);

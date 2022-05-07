@@ -100,6 +100,7 @@ nav {
 
 nav ul {
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -416,6 +417,8 @@ nav ul li a:hover {
 
 .contactArea {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .contactBox {
@@ -452,6 +455,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    opacity: 0.5;
 }
 
 .footerInfo a {
@@ -470,43 +474,154 @@ footer {
 
 .menuMobile {
     display: none;
+    justify-content: center;
     width: 40px;
     height: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
+    margin: 10px 0px 10px 0px;
+    cursor: pointer;
 }
 
 .mm_line {
     height: 3px;
+    margin: 3px;
     background-color: #39AAE1;
 }
 
 /* MEDIA QUERY'S */
 
-@media (max-width: 320px) {
-    .menuMobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+@media (min-width: 769px) and (max-width: 1279px) {
+
+    .container {
+        width: 80%;
     }
 
-    nav {
-        display: flex;
-        position: absolute;
-        right: 0px;
-        top: 190px;
-    }
-
-    nav ul {
-        flex-direction: column;
+    nav ul li {
+        margin: 10px;
     }
 
     nav ul li a {
-        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .myImage img {
+        width: 350px;
+    }
+
+    .myInfo h2 {
+        font-size: 20px;
+    }
+
+    .myInfo h1 {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
     }
 
     .myImage {
         display: none;
+    }
+
+    .myInfo h2 {
+        font-size: 20px;
+    }
+
+    .myInfo h1 {
+        font-size: 50px;
+    }
+
+    .aboutMeImage {
+        display: none;
+    }
+
+    .aboutMeInfo h2 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .aboutMeInfo p {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionTitle {
+        margin-bottom: 30px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .myImage {
+        display: none;
+    }
+
+    .myInfo h2 {
+        font-size: 18px;
+    }
+
+    .myInfo h1 {
+        font-size: 40px;
+    }
+
+    .aboutMeImage {
+        display: none;
+    }
+
+    .aboutMeInfo h2 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .aboutMeInfo p {
+        text-align: justify;
+    }
+
+    .projectsImg {
+        width: 250px;
+        height: 150px;
+        margin: 17px 0px;
+    }
+
+    #knowledge h2 {
+        font-size: 35px;
+    }
+
+    #contact h2 {
+        text-align: center;
+        line-height: 40px;
+        font-size: 50px;
+    }
+
+    .contactBox {
+        margin: 20px 10px;
+    }
+
+    footer {
+        margin-top: 20px;
     }
 }
