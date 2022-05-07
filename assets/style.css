@@ -96,11 +96,13 @@ body {
 nav {
     display: flex;
     align-items: center;
+    transition: all .5s ease;
 }
 
 nav ul {
     display: flex;
     align-items: center;
+    transition: all .5s ease;
 }
 
 nav ul li {
@@ -527,8 +529,20 @@ footer {
         flex-direction: column;
     }
 
-    nav ul {
+    nav {
         display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 101px;
+        left: 0;
+        background-color: #04213b;
+        height: 100vh;
+        width: 100vw;
     }
 
     .myImage {
@@ -572,8 +586,20 @@ footer {
         margin-bottom: 30px;
     }
 
-    nav ul {
+    nav {
         display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 101px;
+        left: 0;
+        background-color: #04213b;
+        height: 100vh;
+        width: 100vw;
     }
 
     .myImage {
