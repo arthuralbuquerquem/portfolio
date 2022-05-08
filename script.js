@@ -22,22 +22,22 @@ function activeMenu(){
     let know = document.querySelector('#menuKnow');
     let contact = document.querySelector('#menuContact');
     
-    if (window.scrollY < 1000) {
+    if (window.scrollY < 700) {
         aboutMe.classList.remove('active');
         projects.classList.remove('active');
         know.classList.remove('active');
         contact.classList.remove('active');
-    } else if (window.scrollY > 999 && window.scrollY < 1570) {
+    } else if (window.scrollY > 700 && window.scrollY < 1400) {
         aboutMe.classList.add('active');
         projects.classList.remove('active');
         know.classList.remove('active');
         contact.classList.remove('active');
-    } else if (window.scrollY > 1570 && window.scrollY < 2220) {
+    } else if (window.scrollY > 1400 && window.scrollY < 2070) {
         aboutMe.classList.remove('active');
         projects.classList.add('active');
         know.classList.remove('active');
         contact.classList.remove('active');
-    } else if (window.scrollY > 2220 && window.scrollY < 2400) {
+    } else if (window.scrollY > 2070 && window.scrollY < 2400) {
         aboutMe.classList.remove('active');
         projects.classList.remove('active');
         know.classList.add('active');
