@@ -200,10 +200,20 @@ nav ul li a:hover {
 .myImage img {
     width: 100%;
     transition: all .7s ease;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
 }
 
-.myImage img:hover {
-    transform: scale(1.1);
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* ABOUT ME */
