@@ -1,3 +1,4 @@
+/* ESTILOS GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +8,12 @@
     cursor: url(../assets/images/mouseicon.png), auto;
 }
 
+ /* ESTILOS NO HTML*/
 html {
     scroll-behavior: smooth;
 }
 
+/* SCROLLBAR ESTILIZADO */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -23,6 +26,8 @@ html {
     background-color: var(--font-color-primary);
     border-radius: 30px;
 }
+
+/* CORES GERAIS */
 
 :root {
     --font-color-primary: #0086bb;
@@ -115,7 +120,8 @@ nav ul li a {
     text-decoration: none;
     color: #FFF;
     font-size: 18px;
-    transition: all .2s ease-out;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: all .4s ease;
     padding-bottom: 4px;
 }
 
@@ -237,10 +243,19 @@ nav ul li a:hover {
 .aboutMeImage img {
     width: 85%;
     transition: all .8s ease-in-out;
+    animation: scale 5s ease-in-out infinite;
 }
 
-.aboutMeImage img:hover {
-    transform: scale(1.09);
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .aboutMeInfo {
@@ -304,23 +319,62 @@ nav ul li a:hover {
     transform: scale(1.08, 1.08);
 }
 
-.projectsImg:nth-child(2) {
+.imgHover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 346px;
+    height: 196px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s linear;
+}
+
+.projectsImg:hover .imgHover {
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.imgHover a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    color: #FFF;
+    opacity: 0;
+    text-decoration: none;
+    transform: scale(0.5, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.projectsImg:hover .imgHover a {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.languageColor {
+    color: var(--font-color-primary);
+    font-weight: 700;
+}
+
+.thumbImg2 {
     background-image: url(../assets/images/projects-devboost.png);
 }
 
-.projectsImg:nth-child(3) {
+.thumbImg3 {
     background-image: url(../assets/images/projects-starbucks.png);
 }
 
-.projectsImg:nth-child(4) {
+.thumbImg4 {
     background-image: url(../assets/images/projects-medcenter.png);
 }
 
-.projectsImg:nth-child(5) {
+.thumbImg5 {
     background-image: url(../assets/images/projects-bateria.png);
 }
 
-.projectsImg:nth-child(6) {
+.thumbImg6 {
     background-image: url(../assets/images/projects-pizzas.png);
 }
 

@@ -1,3 +1,5 @@
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
+
 // SUBIR E DESCER MENU
 function menuSubir() {
     let headerMargin = document.querySelector('.headerContent');
@@ -16,7 +18,7 @@ function menuSubir() {
 }   setInterval(menuSubir, 100);
 
 // MENU COM ACTIVE
-function activeMenu(){
+/* function activeMenu(){
     let aboutMe = document.querySelector('#menuAboutMe');
     let projects = document.querySelector('#menuProjects');
     let know = document.querySelector('#menuKnow');
@@ -48,7 +50,16 @@ function activeMenu(){
         know.classList.remove('active');
         contact.classList.add('active');
     }
-}   setInterval(activeMenu, 100);
+}   setInterval(activeMenu, 100); */
+
+const items = document.querySelectorAll('.headerContent a');
+items.forEach((item) => {
+    item.addEventListener('click', ()=> {
+        document.querySelector('.headerContent a.active').classList.remove('active');
+        item.classList.add('active')
+    })
+})
+
 
 // MENU MOBILE
 const menuMobile = ()=> {
@@ -61,3 +72,6 @@ const menuMobile = ()=> {
     }
 }
 document.querySelector('.menuMobile').addEventListener('click', menuMobile)
+
+
+document.querySelector('.')
