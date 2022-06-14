@@ -17,41 +17,8 @@ function menuSubir() {
     }
 }   setInterval(menuSubir, 100);
 
-// MENU COM ACTIVE
-/* function activeMenu(){
-    let aboutMe = document.querySelector('#menuAboutMe');
-    let projects = document.querySelector('#menuProjects');
-    let know = document.querySelector('#menuKnow');
-    let contact = document.querySelector('#menuContact');
-    
-    if (window.scrollY < 700) {
-        aboutMe.classList.remove('active');
-        projects.classList.remove('active');
-        know.classList.remove('active');
-        contact.classList.remove('active');
-    } else if (window.scrollY > 700 && window.scrollY < 1400) {
-        aboutMe.classList.add('active');
-        projects.classList.remove('active');
-        know.classList.remove('active');
-        contact.classList.remove('active');
-    } else if (window.scrollY > 1400 && window.scrollY < 2070) {
-        aboutMe.classList.remove('active');
-        projects.classList.add('active');
-        know.classList.remove('active');
-        contact.classList.remove('active');
-    } else if (window.scrollY > 2070 && window.scrollY < 2400) {
-        aboutMe.classList.remove('active');
-        projects.classList.remove('active');
-        know.classList.add('active');
-        contact.classList.remove('active');
-    } else {
-        aboutMe.classList.remove('active');
-        projects.classList.remove('active');
-        know.classList.remove('active');
-        contact.classList.add('active');
-    }
-}   setInterval(activeMenu, 100); */
 
+// MARCAR CADA MENU
 const items = document.querySelectorAll('.headerContent a');
 items.forEach((item) => {
     item.addEventListener('click', ()=> {
@@ -62,7 +29,7 @@ items.forEach((item) => {
 
 
 // MENU MOBILE
-const menuMobile = ()=> {
+const menuMobile = () => {
     let menu = document.querySelector('#menu')
 
     if(menu.style.display == 'flex') {
@@ -71,7 +38,5 @@ const menuMobile = ()=> {
         menu.style.display = 'flex'
     }
 }
+
 document.querySelector('.menuMobile').addEventListener('click', menuMobile)
-
-
-document.querySelector('.')

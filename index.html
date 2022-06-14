@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Kanit:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" href="assets/images/iconsite.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Portfólio | Arthur Albuquerque Front-end-developer</title>
 </head>
 <body>
@@ -62,7 +63,7 @@
 
         <!-- INÍCIO DO QUEM SOU -->
         <section id="aboutMe">
-            <div class="aboutMe container">
+            <div class="aboutMe container" data-aos="fade-down">
                 <!-- IMAGEM QUEM SOU -->
                 <div class="aboutMeImage">
                     <img src="assets/images/logo.png" alt="">
@@ -82,42 +83,42 @@
                 <h2 class="sectionTitle">Projetos<span class="bluePoint">.</span></h2>
                 <!-- PROJETOS IMAGENS -->
                 <div class="projectsBox">
-                    <div class="projectsImg thumbImg1">
+                    <div class="projectsImg thumbImg1" data-aos="fade-right">
                         <div class="imgHover">
                             <a href="https://arthuralbuquerquem.github.io/avax-front-end/" target="_blank">
                                 <p>Essa foi uma Landing Page desenvolvida para testar conhecimentos de <span class="languageColor">HTML</span> e <span class="languageColor">CSS</span> puro.</p>
                             </a> 
                         </div>
                     </div>
-                    <div class="projectsImg thumbImg2">
+                    <div class="projectsImg thumbImg2" data-aos="fade-right">
                         <div class="imgHover">
                             <a href="https://arthuralbuquerquem.github.io/devboost-desafio03/" target="_blank">
                                 <p>Esse foi um desafio Landing Page proposto pela DevBoost. Feito somente em <span class="languageColor">HTML</span>, <span class="languageColor">CSS</span> e <span class="languageColor">JavaScript</span>.</p>
                             </a> 
                         </div>
                     </div>
-                    <div class="projectsImg thumbImg3">
+                    <div class="projectsImg thumbImg3" data-aos="fade-right">
                         <div class="imgHover">
                             <a href="https://arthuralbuquerquem.github.io/starbucks-front-end/" target="_blank">
                                 <p>Essa foi uma Landing Page desenvolvida para testar conhecimentos de <span class="languageColor">HTML</span> e <span class="languageColor">CSS GRID</span>.</p>
                             </a> 
                         </div>
                     </div>
-                    <div class="projectsImg thumbImg4">
+                    <div class="projectsImg thumbImg4" data-aos="fade-left">
                         <div class="imgHover">
                             <a href="https://arthuralbuquerquem.github.io/medicenter-front-end/" target="_blank">
                                 <p>Essa foi uma Landing Page desenvolvida para testar conhecimentos de <span class="languageColor">HTML</span> e <span class="languageColor">CSS</span> puro.</p>
                             </a> 
                         </div>
                     </div>
-                    <div class="projectsImg thumbImg5">
+                    <div class="projectsImg thumbImg5" data-aos="fade-left">
                         <div class="imgHover">
                             <a href="https://arthuralbuquerquem.github.io/bateria/" target="_blank">
                                 <p>Que tal tocar uma música nessa bateria? Ela também tem um copmpositor funcional! Feita em <span class="languageColor">JavaScript</span>.</p>
                             </a> 
                         </div>
                     </div>
-                    <div class="projectsImg thumbImg6">
+                    <div class="projectsImg thumbImg6" data-aos="fade-left">
                         <div class="imgHover">
                             <a href="https://arthuralbuquerquem.github.io/compra-de-pizzas/" target="_blank">
                                 <p>Bateu aquela vontade de uma pizzazinha? Encha seu carrinho com diversos sabores! Feita em <span class="languageColor">JavaScript</span>.</p>
@@ -133,7 +134,7 @@
         <section id="knowledge">
             <div class="knowledge container">
                 <h2 class="sectionTitle">Conhecimentos<span class="bluePoint">.</span></h2>
-                <div class="knowledgeArea">
+                <div class="knowledgeArea" data-aos="zoom-in">
                     <div class="knowledgeBox">
                         <img src="assets/images/html5.svg" alt="">
                         <p><span class="knowledgeNameColor">HTML</span> é uma linguagem baseada em marcação, onde marcamos os elementos para definir quais informações a página vai exibir.</p>
@@ -159,7 +160,7 @@
         <section id="contact">
             <div class="contact container">
                 <h2 class="sectionTitle">Entre em Contato<span class="bluePoint">.</span></h2>
-                <div class="contactArea">
+                <div class="contactArea" data-aos="fade-in">
                     <div class="contactBox">
                         <p>E-mail</p>
                         <a href="mailto:arthuralbqr@gmail.com" target="_blank"><img src="assets/images/email.png" alt=""></a>
@@ -201,6 +202,13 @@
         glare: true,
         "max-glare": 0.3,
 	});
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        })
     </script>
 </body>
 </html>
